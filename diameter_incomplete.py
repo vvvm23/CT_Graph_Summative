@@ -8,27 +8,9 @@ import graph10
 
 
 def max_distance(G):
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Use breadth first search over every combination of nodes.
+# Additionally, use in built functions to check correctness of my solutions.
+# or, if feeling cheeky, use inbuilt nx.diameter(G)
 
 
 print()
