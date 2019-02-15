@@ -9,15 +9,18 @@ def bfs(G,a,b):
     G.add_nodes_from(G.nodes(), label = -1) # initialization of all labels
     G.node[a]['label'] = 0
 
+    ###
+    i = 0
+    while G.node[b]['label'] == -1:
+        u_list = [_ for _ in G.nodes() if G.node[_]['label'] == i]
+        for u in u_list:
+            neighbours = [_ for _ in G[u] if G.node[_]['label'] == -1]
+            for v in neighbours:
+                G.node[v]['label'] = i+1
 
-
-
-
-
-
-
-
-
+        i += 1
+    return G.node[b]['label']    
+    ###    
 
 G6=graph6.Graph()
 a=12

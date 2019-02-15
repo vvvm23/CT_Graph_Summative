@@ -7,6 +7,7 @@ import graph5
 
 
 def find_next_vertex(G):
+    ###
     for n in G.nodes():
         if G.node[n]['color'] == 'never coloured':
             neighbours = [(_, G.node[_]['color']) for _ in G[n] if not G.node[_]['color'] == 'never coloured']
@@ -14,6 +15,7 @@ def find_next_vertex(G):
                 return n
 
     return 0
+    ###
 
 def find_smallest_color(G,i):
     ###
