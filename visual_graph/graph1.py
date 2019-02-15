@@ -33,5 +33,5 @@ def Graph():
     return G
 
 G = Graph()
-nx.draw(G)
+nx.draw_networkx(G)
 plt.show()

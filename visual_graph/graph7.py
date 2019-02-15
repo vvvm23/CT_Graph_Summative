@@ -26,6 +26,6 @@ def Graph():
 
 import matplotlib.pyplot as plt
 G = Graph()
-nx.draw(G)
+nx.draw_networkx(G)
 plt.show()
 
