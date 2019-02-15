@@ -7,8 +7,6 @@ import graph5
 
 
 def find_smallest_color(G,i):
-    n = len(G.nodes())
-
     ###
     smallest_colour = 1
 
@@ -28,8 +26,8 @@ def greedy(G):
     n = len(G.nodes())
     for i in range(1, n+1):
         G = find_smallest_color(G, i)
-    ####
     kmax = max([G.node[_]['color'] for _ in G.nodes()])
+    ####
     print()
     for i in G.nodes():
         print('vertex', i, ': color', G.node[i]['color'])
