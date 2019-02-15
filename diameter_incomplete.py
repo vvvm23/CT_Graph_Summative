@@ -6,11 +6,35 @@ import graph8
 import graph9
 import graph10
 
+def bfs(G,a,b):
+    G.add_nodes_from(G.nodes(), label = -1) # initialization of all labels
+    G.node[a]['label'] = 0
+
+    ###
+    i = 0
+    while G.node[b]['label'] == -1:
+        u_list = [_ for _ in G.nodes() if G.node[_]['label'] == i]
+        for u in u_list:
+            neighbours = [_ for _ in G[u] if G.node[_]['label'] == -1]
+            for v in neighbours:
+                G.node[v]['label'] = i+1
+
+        i += 1
+    return G.node[b]['label']    
 
 def max_distance(G):
 # Use breadth first search over every combination of nodes.
 # Additionally, use in built functions to check correctness of my solutions.
 # or, if feeling cheeky, use inbuilt nx.diameter(G)
+    d = 0
+    for s_n in G.nodes():
+        c_n = [_ for _ in G.nodes() if not _ == s_n]
+        for e_n in c_n:
+            c = bfs(G, s_n, e_n)
+            if c > d:
+                d = c
+    
+    return d
 
 
 print()
