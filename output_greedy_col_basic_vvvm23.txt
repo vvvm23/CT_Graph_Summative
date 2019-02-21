@@ -76,3 +76,8 @@ vertex 12 : color 3
 vertex 13 : color 4
 
 The number of colors that Greedy computed is: 4
+
+vertex 12 : color 3
+vertex 13 : color 4
+
+The number of colors that Greedy computed is: 4
