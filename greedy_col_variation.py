@@ -8,7 +8,9 @@ import graph5
 
 def find_next_vertex(G):
     ###
-    for n in G.nodes():
+    nodes = [_ for _ in G.nodes()]
+    nodes.sort()
+    for n in nodes:
         if G.node[n]['color'] == 'never coloured':
             neighbours = [(_, G.node[_]['color']) for _ in G[n] if not G.node[_]['color'] == 'never coloured']
             if len(neighbours) > 0:
