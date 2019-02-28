@@ -31,7 +31,6 @@ def Graph():
     
     G.add_nodes_from(G.nodes(), color='never coloured')
     return G
-
 import matplotlib.pyplot as plt
 G = Graph()
 nx.draw_networkx(G)

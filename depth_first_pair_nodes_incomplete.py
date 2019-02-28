@@ -12,6 +12,7 @@ def dfs(G,a,b,u):
     if G.nodes[u]['label'] == -1:
         G.nodes[u]['label'] = 0
     neighbours = [_ for _ in G[u]]
+
     for n in neighbours:
         if G.node[n]['label'] == -1:
             G.nodes[n]['label'] = 1 + G.nodes[u]['label']

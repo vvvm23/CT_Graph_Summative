@@ -22,6 +22,7 @@ def find_smallest_color(G,i):
     ###
 
 def greedy(G):
+    global kmax
     #### 
     n = len(G.nodes())
     for i in range(1, n+1):
