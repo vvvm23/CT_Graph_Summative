@@ -29,4 +29,3 @@ import matplotlib.pyplot as plt
 G = Graph()
 nx.draw_networkx(G)
 plt.show()
-
