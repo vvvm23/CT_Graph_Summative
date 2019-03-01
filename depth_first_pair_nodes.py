@@ -8,6 +8,7 @@ import graph10
 ### count the length of the path between two pre-specified vertices a and b, using Depth-First-Search
 
 def dfs(G,a,b,u):
+    print(u)
     if not G.nodes[b]['label'] == -1: # Terminates once b is found like in assignment spec
         return G
 
