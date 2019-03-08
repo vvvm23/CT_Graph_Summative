@@ -28,7 +28,7 @@ def max_distance(G):
 # or, if feeling cheeky, use inbuilt nx.diameter(G)
     d = 0
     for s_n in G.nodes():
-        c_n = [_ for _ in G.nodes() if not _ == s_n]
+        c_n = [_ for _ in G.nodes()]# if not _ == s_n]
         for e_n in c_n:
             c = bfs(G, s_n, e_n)
             if c > d:
